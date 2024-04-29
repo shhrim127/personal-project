@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minjitube Mobile</title>
+</head>
+<body>
+    <!--semantic tag 시맨틱 태그
+        main(주요콘텐츠 포괄, 텍스트 본문, 콘텐츠,유일, 모든 태그 앞)
+        header(머릿글, 로고,제목) 
+        nav(탐색 링크 포함 페이지 부분, 메뉴, 탭)
+        article(독립적인글,배포.재사용) 
+        aside(사이드바,페이지 콘텐츠를 제외한 콘텐츠 정의)
+        section(문서의 부분, 하위주제, 부제목) 
+        footer(바닥글,저작권,연락처,추가링크)
+        details(추가세부정보,버튼사용 여닫기)
+        -summary(detail 하위목록)
+        figure(사진, 코드목록, 자체포함 콘텐츠)
+        -figcaption(figure요소 캡션 정의, 설명 추가)
+
+        header+section.player
+        헤더(유튜브배너, 검색) 옆 비디오플레이어(섹션 안 위치) 
+        +section.info 플레이어 밑 정보(영상제목, 좋아요 구독 등) (다른 세션 안 위치 )
+        +section.UpNext 다음 재생 비디오 , 추천 비디오 목록 세션
+    
+        header+section.player+section.info+section.UpNext   >>>>
+        <header></header>
+        <section class="player"></section>
+        <section class="info"></section>
+        <section class="UpNext"></section>
+
+        //아이콘 모음
+        상단로고, 검색, 설정
+        <i class="fa-solid fa-fire" style="color: #ffadbe;"></i>
+        <i class="fa-solid fa-magnifying-glass" style="color: #ffadbe;"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+        영상 밑 제목 옆 가려진 세부정보 여닫기 버튼
+        <i class="fa-solid fa-caret-down"></i>
+        좋아요, 싫어요, 공유, report깃발
+        <i class="fa-solid fa-thumbs-up" style="color: #74C0FC;"></i>
+        <i class="fa-solid fa-thumbs-down" style="color: #74C0FC;"></i>
+        <i class="fa-regular fa-share-from-square"></i>
+        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-flag"></i>
+    -->
+
+    <!-- Header -->
+    <header>
+        <!-- "logo" "icon" 클래스
+        div 속성 활용 컨테이너 
+        .logo+.icons  >>>>
+        <div class="logo"></div>
+        <div class="icons"></div>
+
+        텍스트 관련 스타일, 속성 span
+        span.title  >>>>
+        <span class="title"></span>
+        -->
+
+        <div class="logo">
+            <i class="fa-solid fa-fire" style="color: #ffadbe;"></i>
+            <span class="title">MinjiTube</span>
+        </div>
+        <div class="icons"> <!--ui li 사용가능-->
+            <i class="fa-solid fa-magnifying-glass" style="color: #ffadbe;"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player"></section>
+    <section class="info"></section>
+    <section class="UpNext"></section>
+
+</body>
+</html>
