@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/a574eef96d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minjitube Mobile</title>
 </head>
@@ -68,9 +69,87 @@
         </div>
     </header>
 
-    <!-- Video Player -->
-    <section class="player"></section>
-    <section class="info"></section>
+    <!-- Video Player 
+    vidio태그
+    모든 브라우저 지원
+    controls 재생 바 생성(재생/멈춤, 볼륨)
+    width height 영상크기 조절 (하나만 지정- 나머지 자동 계산 적용)
+    autoplay 자동재생 loop 반복재생 muted 음소거
+    preload 재생 전 미디어 파일 다운 (none 재생버튼 눌러야먄 다운 metadata 메타정보만 다운 auto 기본값으로 웹 문서 시 미디어 파일도 다운)
+    poster 영상 재생 불가능 경우 대체 이미지 지정
+
+    src 미디어 파일 경로
+    type 미디어 파일 유형 (미디어 재생여부 확인 위해)
+    codecs 비디오 코덱 지정
+    //track 자막 태그
+    -->
+    <section class="player">
+        <video controls src="video/MINJI_HIGH.MOV" height="444"></video>
+    </section>
+
+    <!-- Video info -->
+    <section class="info">
+        <!-- 1.metadata(해시태그,제목) 2.actions 3.영상올린채널 정보
+            .metadata+.actions+.channel >>>>
+            <div class="metadata">
+                ul.hashtags+.titleAndButton+.views
+                <ul class="hashtags">
+                    li*3  //<li></li> 3세트 생성
+                </ul>
+            </div>
+            <div class="actions"></div>
+            <div class="channel"></div>
+        -->
+        <div class="metadata">
+            <ul class="hashtags">
+                <li>#MINJI</li>
+                <li>#PersonalProject</li>
+                <li>#CloneCoding</li>
+            </ul>
+            <div class="titleAndButton">
+                <span class="title">
+                    민지 롯데월드 입장전
+                </span>
+                <!-- 제목 옆 버튼(부제목,추가설명) -->
+                <button class="moreBtn">
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+            </div>
+            <!-- 시청 수, 업로드 기간-->
+            <div class="views">
+                <span class="views">
+                    1M views 1 year 7 month ago
+                </span>
+            </div>
+        </div>
+
+        <ul class="actions">
+        <!-- (li>button)*5 -->
+
+         <li><button>   <!--좋아요-->
+            <i class="fa-solid fa-thumbs-up" style="color: #74C0FC;"></i>
+            <span>1K</span>
+        </button></li>
+         <li><button>   <!--싫어요-->
+            <i class="fa-solid fa-thumbs-down" style="color: #74C0FC;"></i>
+            <span>0</span>
+        </button></li>
+         <li><button>   <!--공유-->
+            <i class="fa-regular fa-share-from-square"></i>
+            <span>Share</span>
+        </button></li>
+         <li><button>   <!--저장-->
+            <i class="fa-solid fa-plus"></i>
+            <span>Save</span>
+        </button></li>
+         <li><button>   <!--신고-->
+            <i class="fa-solid fa-flag"></i>
+            <span>Report</span>
+        </button></li>
+        </ul>
+
+        <div class="channel"></div>
+    </section>
     <section class="UpNext"></section>
 
 </body>
