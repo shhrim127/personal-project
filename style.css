@@ -1,0 +1,83 @@
+:root{
+    /*root 가상클래스(pseudo-class)
+    커스텀 속성 전역 사용
+    항상 html을 가리킴, html 보다 스타일 적용 우선순위 높음
+    요소의 속성 값, 상태, 상대적 위치를 이용해 요소 선택 가능
+    <변수선언>    --속성이름: 속성값
+    ex)  --white-color: #fff ;
+    <변수사용>    var(속성이름)
+    ex)  background-color: var(--white-color) ;
+    */
+    
+    /* color 정의*/
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    /* size*/
+    --padding: 12px;    
+    --avater-size: 36px;
+    
+    /* font size */
+    --font-large: 16px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+
+}/*사이즈가 같거나 같은 색을 쓸 것들 변수로 잘 정리*/
+/* 한결같고 일정하게 */
+
+*{  /*전체 선택자 모든요소 선택*/
+    padding: 0; /*내부여백*/
+    margin: 0; /*외부여백*/
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+/* Header */
+header{
+    /*display 속성 (요소 레이아웃)
+    none : 보이지 않음
+    flex : 가로 또는 세로로 1차원 배치
+    grid : 2차원 배치, 행과 열의 비율 크기 지정
+    block : 블록 박스
+    inline : 인라인 박스 (default)
+    inline-block : 요소자체는 인라인처럼 동작, 요소내부는 블록으로 동작
+    */
+    display: flex;
+    /*justify-content: 콘텐츠 항목 사이와 주위 공간분배
+    start : 시작점 정렬
+    center : 가운데 정렬
+    space-between : 아이템 사이에 균일한 간격
+    space-around : 아이템 둘레에 균일한 간격
+    space-evenly : 아이템들의 사이와 양끝 일정한 간격
+    */
+    justify-content: space-between;
+
+    padding: var(--padding);
+    /* var() 
+    커스텀 속성 사용시 var()함수안에 속성이름 적어 사용
+    맨 위 root{}에 정의 되어 있음
+    */
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+/*헤더안에 로고 클래스 선택자*/
+header .logo{
+     font-size: var(--font-large);
+}
+header .logo i {
+    color: var(--red-color)
+}
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+/*   --header 완성--   */
