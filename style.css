@@ -81,3 +81,22 @@ header .icons .fa-search {
 }
 
 /*   --header 완성--   */
+
+/*   Video Player   */
+.player {
+    /* 영상 중앙위치 */
+    text-align: center;
+
+    /*스크롤해도 영상 위에 계속 볼 수 있게 고정*/
+    position: sticky;
+    top: 0;
+
+    background-color: var(--black-color);
+
+}
+.player video{
+    /*영상이 웹 사이즈에 맞춰 커지거나 작아짐*/
+    width: 100%;
+    height: 100%;
+    max-width: 1000px; /*최대크기제한*/
+}
