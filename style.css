@@ -45,10 +45,11 @@ ul {
     list-style: none;
 }
 
-button,
+button, 
 button:focus{
     border: none;
     /* ㄴ경계선 삭제*/
+
     cursor: pointer;
     /*cursor 속성 (마우스 커서모양 변경)
     auto : 자동
@@ -61,6 +62,7 @@ button:focus{
     (ne-resize,sw-resize), (nw-resize, se-resize)
     */
     outline: none;
+    
 }
 
 /* Header */
@@ -165,9 +167,50 @@ header .icons .fa-search {
 .info .metadata .titleAndButton .moreBtn {
     /*제목 더보기 버튼 위치*/
     height: 100%;
+    background-color: var(--white-color);
 }
 
 .info .views {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
+
+/*  Action Buttons  */
+.actions {
+    display: flex;
+    /* ㄴ옆으로 정렬 */
+    justify-content: space-around;
+    margin: var(--padding);
+}
+
+.actions button {
+    display: flex;
+    flex-direction: column;
+    /*flex-direction 아이템 생성 방향
+    row : (왼-오) 옆으로 생성(default)
+    row-reverse : (오-왼) 옆으로 생성
+    column : (위-아래) 
+    column-reverse : (아래-위)
+    */
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+
+    background-color: var(--white-color);
+    span{
+        background-color: var(--white-color);
+    }
+}
+
+.actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(--padding)/2;
+    font-size: 16px;
+    background-color: var(--white-color);
+}
+
+.actions button i.active{
+    color: var(--blue-color);
+}/*하 진짜 버튼 그냥 색 바꾸는 건데 왜 눌러도 안 바뀌지 왜 버튼이 안눌리지 이지랄하믄서 40분 보냈네 아 나 진짜 js 파일 2번 만들었다 지우고 아나 진짜*/
+/*   -- Actions --   */
+
+/*  Channel Description  */
