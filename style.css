@@ -127,9 +127,10 @@ header .icons .fa-search {
 }
 /*   --video player--   */
 
-.info {
-    /*영상 아래 정보란*/
+
+.infoAndUpNext .info{
     padding: var(--padding);
+     /*영상 아래 정보란*/
 }
 
 .info .metadata .hashtags {
@@ -168,22 +169,23 @@ header .icons .fa-search {
     /*제목 더보기 버튼 위치*/
     height: 100%;
     background-color: var(--white-color);
+    transition: transform 300ms ease-in-out;
 }
 
-.info .views {
+.info .metadata .views {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
 
 /*  Action Buttons  */
-.actions {
+.info .actions {
     display: flex;
     /* ㄴ옆으로 정렬 */
     justify-content: space-around;
     margin: var(--padding);
 }
 
-.actions button {
+.info .actions button {
     display: flex;
     flex-direction: column;
     /*flex-direction 아이템 생성 방향
@@ -201,20 +203,20 @@ header .icons .fa-search {
     }
 }
 
-.actions button i {
+.info .actions button i {
     margin: 0 auto;
     margin-bottom: calc(--padding)/2;
     font-size: 16px;
     background-color: var(--white-color);
 }
 
-.actions button i.active{
+.info .actions button i.active{
     color: var(--blue-color);
 }/*하 진짜 버튼 그냥 색 바꾸는 건데 왜 눌러도 안 바뀌지 왜 버튼이 안눌리지 이지랄하믄서 40분 보냈네 아 나 진짜 js 파일 2번 만들었다 지우고 아나 진짜*/
 /*   -- Actions --   */
 
 /*  Channel Description  */
-.channel {
+.info .channel {
     display: flex;
     justify-content: space-between;
     /* 좋아요 등 버튼 위아래에 줄 생성*/
@@ -222,33 +224,99 @@ header .icons .fa-search {
     border-bottom: 1px solid var(--grey-light-color);
 }
 
-.channel .metadata {
+.info .channel .metadata {
     display: flex;
     align-items: center;
 }
 
-.channel .metadata .info {
+.info .channel .metadata .info {
     display: flex;
     flex-direction: column;
 }
-.channel .metadata img {
+.info .channel .metadata img {
     width: var(--avater-size);
     height: var(--avater-size);
     border-radius: 50%;
+    margin-right: var(--padding);
 }
 
-.channel .metadata .info .name {
+.info .channel .metadata .info .name {
     font-size: var(--font-medium);
 }
 
-.channel .metadata .info .subscribers {
+.info .channel .metadata .info .subscribers {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
 
-.channel .subscribe {
+.info .channel .subscribe {
     text-transform: uppercase;
     color: var(--red-color);
     font-size: var(--font-medium);
     background-color: var(--white-color);
 }
+
+/*  Up Next  */
+.upNext {
+    padding: 0 var(--padding);
+    .item{
+        display: flex;
+        margin-top: var(--padding);
+    }
+}
+
+.upNext > .title{
+    /* '>' 자식 로드 셀렉터 
+    바로 뒤에 따라오는 자식 */
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+.upNext .item{
+    display: flex;
+    margin-right: var(--padding);
+}
+
+/*이미지65% 글자35% 버튼5% 아이템 분배*/
+
+.upNext .item .img{
+    flex-basis: 1 1 35%;
+    margin-right: var(--padding);
+}
+.upNext .item .img img{
+    width: 100%;
+}
+.upNext .item .info{
+    flex-basis: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+}
+.upNext .item .moreBtn{
+    flex-basis: 1 1 5%;
+}
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+.upNext .item .info .title
+{
+    font-size:var(--font-small);
+}
+.upNext .item .info .name,
+.upnext .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+.infoAndUpNext{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px){
+    .infoAndUpNext{
+        flex-direction: row;
+    }
+    .upNext{
+        padding: var(--padding);
+    }
+}
+
