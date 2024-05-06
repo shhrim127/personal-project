@@ -214,3 +214,41 @@ header .icons .fa-search {
 /*   -- Actions --   */
 
 /*  Channel Description  */
+.channel {
+    display: flex;
+    justify-content: space-between;
+    /* 좋아요 등 버튼 위아래에 줄 생성*/
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+.channel .metadata img {
+    width: var(--avater-size);
+    height: var(--avater-size);
+    border-radius: 50%;
+}
+
+.channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+    background-color: var(--white-color);
+}
